@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
+ <Header copyright="Copyright (c) 2014 alaiacano" description="Linear Regression Model">
+  <Extension name="user" value="alaiacano" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2014-06-02 10:44:04</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="4">
+  <DataField name="RI" optype="continuous" dataType="double"/>
+  <DataField name="Na" optype="continuous" dataType="double"/>
+  <DataField name="Mg" optype="continuous" dataType="double"/>
+  <DataField name="Al" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <RegressionModel modelName="Linear_Regression_Model" functionName="regression" algorithmName="least squares">
+  <MiningSchema>
+   <MiningField name="RI" usageType="predicted"/>
+   <MiningField name="Na" usageType="active"/>
+   <MiningField name="Mg" usageType="active"/>
+   <MiningField name="Al" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_RI" feature="predictedValue"/>
+  </Output>
+  <RegressionTable intercept="1.53765493723434">
+   <NumericPredictor name="Na" exponent="1" coefficient="-0.000845891895863518"/>
+   <NumericPredictor name="Mg" exponent="1" coefficient="-0.000996957344725958"/>
+   <NumericPredictor name="Al" exponent="1" coefficient="-0.00364837438703253"/>
+  </RegressionTable>
+ </RegressionModel>
+</PMML>
