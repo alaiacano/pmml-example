@@ -1,8 +1,10 @@
-This is a little demo project about how to apply PMML models in Scalding. I'll have an accompanying blog post up "soon."
+This is a little demo project about how to apply [PMML models](http://en.wikipedia.org/wiki/Predictive_Model_Markup_Language) in [Scalding](http://www.github.com/twitter/scalding). I'll have an accompanying blog post up "soon."
 
 # Usage
 
-There's a `Predictable[T]` trait in here that you can use to extend a `case class`. To configure your model, you'll need to specify three things:
+The first thing you'll need is a PMML file representing the predictive model that you want to apply. You can build that in R or any other language that will export to PMML. 
+
+Once you have that, there's a `Predictable[T]` trait in here that you can use to extend a class that represents a single observation. To configure your model, you'll need to specify three things:
 
   * `ClassifyFields` - Fields used for the classification
   * `PredictField` - Field to be predicted
