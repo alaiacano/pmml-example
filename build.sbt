@@ -19,6 +19,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.twitter" % "scalding-core_2.10" % scaldingVersion,
   "com.twitter" % "scalding-args_2.10" % scaldingVersion,
+  "com.twitter" % "scalding-json_2.10" % scaldingVersion,
   "org.jpmml" % "pmml-evaluator" % pmmlVersion,
   "org.jpmml" % "pmml-model" % pmmlVersion,
   "org.apache.hadoop" % "hadoop-core" % "0.20.2" % "provided"
